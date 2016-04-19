@@ -9,7 +9,8 @@ var Forecast = require('../');
 var forecast = new Forecast({
   service: 'forecast.io',
   key: 'your-api-key',
-  units: 'celsius',
+  units: 'us',
+  language: 'de',
   cache: true,
   ttl: {
     minutes: 5
@@ -17,7 +18,7 @@ var forecast = new Forecast({
 });
 
 // Retrieve weather information using coordinates (Sydney, Australia)
-forecast.get([-33.8683, 151.2086], function(err, result) {
+forecast.get([-33.8683, 151.2086], { exclude: 'alerts' }, function(err, result) {
   if(err) return console.dir(err);
 
   console.log('Latitude: %s', result.latitude);
