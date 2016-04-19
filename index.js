@@ -22,7 +22,7 @@ var Forecast = module.exports = function(options) {
 
   defaults(this.options, {
     service: 'forecast.io',
-    units:   'celcius',
+    units:   'celsius',
     cache:   true,
     ttl:     { minutes: 30 }
   });

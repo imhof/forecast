@@ -9,7 +9,7 @@ var Forecast = require('../');
 var forecast = new Forecast({
   service: 'forecast.io',
   key: 'your-api-key',
-  units: 'celcius',
+  units: 'celsius',
   cache: true,
   ttl: {
     minutes: 5
